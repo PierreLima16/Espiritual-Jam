@@ -62,7 +62,7 @@ estado_parado = function()
     
     if (normal)
     {
-        estado = estado_normal;
+        estado = estado_voltando_normal;
     }
     
 }
@@ -80,7 +80,7 @@ estado_movendo = function()
     
     if (normal)
     {
-        estado = estado_normal;
+        estado = estado_voltando_normal;
     }
 }
 
@@ -96,6 +96,24 @@ estado_normal = function()
     
     instance_destroy();
     
+}
+
+estado_voltando_normal = function()
+{
+    estado_txt = "Destransformando";
+    
+    //Zerando minha velocidade
+    velh = 0;
+    velv = 0;
+    
+    troca_sprite(spr_player_saindo_espectro);
+    
+    //Quando minha animação chegar ao fim
+    if (acabou_animacao())
+    {
+        //Vou para o estado de espectro
+        estado = estado_normal;
+    }
 }
 
 estado = estado_parado;

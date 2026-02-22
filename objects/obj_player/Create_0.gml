@@ -21,6 +21,7 @@ estado_txt = "";
 
 alvo = id;
 
+//Criando a câmera ao nascer
 var _cam = instance_create_layer(x, y, layer, obj_camera);
 
 
@@ -131,7 +132,7 @@ estado_parado = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_espectro;
+        estado = estado_indo_espectro;
     }
 }
 
@@ -158,7 +159,7 @@ estado_pulo = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_espectro;
+        estado = estado_indo_espectro;
     }
 }
 
@@ -192,7 +193,7 @@ estado_movendo = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_espectro;
+        estado = estado_indo_espectro;
     }
 }
 
@@ -208,6 +209,28 @@ estado_espectro = function()
     with(obj_camera)
     {
         alvo = _player_espectro;
+    }
+}
+
+#endregion
+
+#region Estados do player de intermédio
+
+estado_indo_espectro = function()
+{
+    estado_txt = "Transformando";
+    
+    //Zerando minha velocidade
+    velh = 0;
+    velv = 0;
+    
+    troca_sprite(spr_player_indo_espectro);
+    
+    //Quando minha animação chegar ao fim
+    if (acabou_animacao())
+    {
+        //Vou para o estado de espectro
+        estado = estado_espectro;
     }
 }
 
