@@ -1,7 +1,6 @@
 colisores();
-// Inherit the parent event
-event_inherited();
 
+pega_input();
 
 estado();
 

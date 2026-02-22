@@ -40,6 +40,7 @@
     {"id":{"name":"obj_player_espectral","path":"objects/obj_player_espectral/obj_player_espectral.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scr_globais","path":"scripts/scr_globais/scr_globais.yy",},},
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},},
     {"id":{"name":"spr_player_espectral","path":"sprites/spr_player_espectral/spr_player_espectral.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},

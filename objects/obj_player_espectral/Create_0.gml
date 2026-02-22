@@ -8,12 +8,16 @@ estado = noone;
 
 estado_txt = "";
 
+alarm[0] = room_speed * 2;
+
 pega_input = function()
 {
     right = keyboard_check(vk_right);
     left  = keyboard_check(vk_left);
     down = keyboard_check(vk_down);
     up  = keyboard_check(vk_up);
+    
+    normal = keyboard_check_pressed(ord("R"));
 }
 
 colisores = function()
@@ -48,6 +52,11 @@ estado_parado = function()
         estado = estado_movendo;
     }
     
+    if (normal)
+    {
+        estado = estado_normal;
+    }
+    
 }
 
 estado_movendo = function()
@@ -60,6 +69,22 @@ estado_movendo = function()
     {
         estado = estado_parado;
     }
+    
+    if (normal)
+    {
+        estado = estado_normal;
+    }
+}
+
+estado_normal = function()
+{
+    estado_txt = "Mundo normal";
+    
+    var _player_normal = instance_create_layer(x, y, layer, obj_player);
+    _player_normal.timer_recarrega = _player_normal.tempo_recarrega;
+    global.espectral = false;
+    
+    instance_destroy();
 }
 
 estado = estado_parado;

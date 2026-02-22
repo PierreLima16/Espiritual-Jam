@@ -11,12 +11,14 @@ right = false;
 left  = false;
 jump  = false;
 
-qtd_pulos = 1;
+tempo_recarrega = room_speed * 1.5;
+timer_recarrega = 0;
 
 chao  = false;
 
 estado = noone;
 estado_txt = "";
+
 
 #region Inputs / colisao / aplicador de velocidade
 
@@ -54,12 +56,23 @@ aplica_velocidade = function()
     velv = clamp(velv, -max_velv, max_velv);
 }
 
+
 colisores = function()
 {
     chao = place_meeting(x, y + 1, obj_colisao);
 }
 
-
+//Método para pegar os inputs do player
+pega_input = function()
+{
+    //Inputs de movimentos básicos
+    right = keyboard_check(vk_right);
+    left  = keyboard_check(vk_left);
+    jump  = keyboard_check_pressed(vk_up);
+    
+    //Input para mudar de mundo
+    espectal = keyboard_check_pressed(ord("R"));
+}
 
 #endregion
 
@@ -77,7 +90,6 @@ estado_parado = function()
     
     aplica_velocidade();
     
-    
     //Se eu pulei
     if (jump)
     {
@@ -90,6 +102,20 @@ estado_parado = function()
     {
         //Indo para o estado de movendo
         estado = estado_movendo;
+    }
+    
+    //Se eu não estou no chao
+    if (!chao)
+    {
+        //Vou para o estado de pulo
+        estado = estado_pulo;
+    }
+    
+    //Se eu apertei R
+    if (espectal and global.espectral)
+    {
+        //Eu entro no mundo espectral
+        estado = estado_espectro;
     }
 }
 
@@ -108,6 +134,12 @@ estado_pulo = function()
         estado = estado_parado;
     }
     
+    //Se eu apertei R
+    if (espectal and global.espectral)
+    {
+        //Eu entro no mundo espectral
+        estado = estado_espectro;
+    }
 }
 
 //Estado de movendo
@@ -130,6 +162,22 @@ estado_movendo = function()
         //Vou para o estado de pulo
         estado = estado_pulo;
     }
+    
+    //Se eu apertei R
+    if (espectal and global.espectral)
+    {
+        //Eu entro no mundo espectral
+        estado = estado_espectro;
+    }
+}
+
+estado_espectro = function()
+{
+    estado_txt = "Espectral";
+    
+    var _player_espectro = instance_create_layer(x, y, layer, obj_player_espectral);
+    
+    instance_destroy();
 }
 
 #endregion
