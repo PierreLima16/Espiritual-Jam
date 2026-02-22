@@ -10,6 +10,10 @@ estado_txt = "";
 
 alarm[0] = room_speed * 2;
 
+alvo = id;
+
+
+
 pega_input = function()
 {
     right = keyboard_check(vk_right);
@@ -44,7 +48,8 @@ estado_parado = function()
     velh = 0;
     
     aplica_velocidade();
-        
+      
+      
     if (right xor left)
     {
         estado = estado_movendo;
@@ -90,6 +95,7 @@ estado_normal = function()
     global.espectral = false;
     
     instance_destroy();
+    
 }
 
 estado = estado_parado;

@@ -2,10 +2,10 @@ event_inherited();
 
 velh     = 0;
 velv     = 0;
-max_velh = 4;
-max_velv = 10;
+max_velh = 2;
+max_velv = 6;
 
-grav  = 0.5;
+grav  = 0.4;
 
 right = false;
 left  = false;
@@ -18,6 +18,10 @@ chao  = false;
 
 estado = noone;
 estado_txt = "";
+
+alvo = id;
+
+var _cam = instance_create_layer(x, y, layer, obj_camera);
 
 
 #region Inputs / colisao / aplicador de velocidade
@@ -47,16 +51,17 @@ aplica_velocidade = function()
     {
         //Reseto a quantidade de pulos
         qtd_pulos = 1;
+        
+        //Se apertei para pular e ainda tenho pulos sobrando
+        if (jump and qtd_pulos > 0)
+        {
+            //Pulando
+            velv = -max_velv;
+            
+            qtd_pulos--;
+        }
     }
     
-    //Se apertei para pular e ainda tenho pulos sobrando
-    if (jump and qtd_pulos > 0)
-    {
-        //Pulando
-        velv = -max_velv;
-        
-        qtd_pulos--;
-    }
     
     //Limitando minha velocidade vertical
     velv = clamp(velv, -max_velv, max_velv);
@@ -89,6 +94,11 @@ estado_parado = function()
 {
     //estado debug
     estado_txt = "Parado";
+    
+    pega_input();
+    
+    //Trocando a sprite
+    troca_sprite(spr_player_idle);
     
     //Zerando minha velocidade
     velh = 0;
@@ -130,8 +140,12 @@ estado_pulo = function()
 {
     estado_txt = "Pulando";
     
-    aplica_velocidade();
+    pega_input();
     
+    //Trocando a sprite
+    troca_sprite(spr_player_jump);
+    
+    aplica_velocidade();
     
     //Se eu não estiver me movendo
     if (chao)
@@ -152,6 +166,11 @@ estado_pulo = function()
 estado_movendo = function()
 {
     estado_txt = "Movendo";
+    
+    pega_input();
+    
+    //Trocando a sprite
+    troca_sprite(spr_player_move);
     
     aplica_velocidade();
     
@@ -185,6 +204,11 @@ estado_espectro = function()
     _player_espectro.dir = dir;
     
     instance_destroy();
+    
+    with(obj_camera)
+    {
+        alvo = _player_espectro;
+    }
 }
 
 #endregion
