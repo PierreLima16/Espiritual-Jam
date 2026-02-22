@@ -6,7 +6,6 @@ max_velh = 4;
 max_velv = 10;
 
 grav  = 0.5;
-dir   = 1;
 
 right = false;
 left  = false;
@@ -31,7 +30,12 @@ aplica_velocidade = function()
     
     //Movimentando
     velh = (right - left) * max_velh;
-    dir = sign(velh);
+    
+    //Se movendo para a direita, olho para a direita
+    if (velh > 0) dir = 1;
+        
+    //Se movendo para a esquerda, olho para a esquerda
+    if (velh < 0) dir = -1;    
     
     //Se estou no chao
     if (!chao)
@@ -178,6 +182,7 @@ estado_espectro = function()
     estado_txt = "Espectral";
     
     var _player_espectro = instance_create_layer(x, y, layer, obj_player_espectral);
+    _player_espectro.dir = dir;
     
     instance_destroy();
 }

@@ -3,6 +3,21 @@ velv     = 0;
 max_velh = 4;
 max_velv = 10;
 
+dir = 1;
+
+//Método para trocar de sprite
+troca_sprite = function(_spr)
+{
+    //Se minha sprite ainda não é a sprite que eu passei
+    if (sprite_index != _spr)
+    {
+        //Ela se torna a sprite que eu passei
+        sprite_index = _spr;
+        //Começo ela do início da animação
+        image_index = 0;
+    }
+}
+
 sistema_colisao = function()
 {
     

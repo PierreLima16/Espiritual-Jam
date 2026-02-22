@@ -32,6 +32,9 @@ aplica_velocidade = function()
     
     velh = (right - left) * max_velh;
     velv = (down - up) * max_velv;
+    
+    if (velh > 0) dir = 1;
+    if (velh < 0) dir = -1    
 }
 
 estado_parado = function()
@@ -82,6 +85,8 @@ estado_normal = function()
     
     var _player_normal = instance_create_layer(x, y, layer, obj_player);
     _player_normal.timer_recarrega = _player_normal.tempo_recarrega;
+    _player_normal.dir = dir;
+    
     global.espectral = false;
     
     instance_destroy();
