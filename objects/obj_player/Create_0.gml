@@ -5,6 +5,12 @@ velv     = 0;
 max_velh = 2;
 max_velv = 6;
 
+pulo_tempo = game_get_speed(gamespeed_fps) * 0.1;
+pulo_timer = 0;
+
+coyote_tempo = game_get_speed(gamespeed_fps) * 0.1;
+coyote_timer = coyote_tempo;
+
 grav  = 0.4;
 
 right = false;
@@ -27,6 +33,32 @@ var _cam = instance_create_layer(x, y, layer, obj_camera);
 
 #region Inputs / colisao / aplicador de velocidade
 
+coyote_jump = function()
+{
+    colisores();
+    
+    if (!chao)
+    {
+        coyote_timer--;
+    }
+    else
+    {
+        coyote_timer = coyote_tempo;
+    }
+}
+
+buffer_pulo = function()
+{
+    colisores()
+    pega_input();
+    
+    if (!chao)
+    {
+        if (jump) pulo_timer = pulo_tempo;
+            
+        pulo_timer--;
+    }
+}
 
 //Método para aplicar velocidade
 aplica_velocidade = function()
@@ -54,12 +86,14 @@ aplica_velocidade = function()
         qtd_pulos = 1;
         
         //Se apertei para pular e ainda tenho pulos sobrando
-        if (jump and qtd_pulos > 0)
+        if (jump or pulo_timer and qtd_pulos > 0)
         {
             //Pulando
             velv = -max_velv;
             
             qtd_pulos--;
+            
+            pulo_timer = 0;
         }
     }
     
@@ -103,12 +137,12 @@ estado_parado = function()
     
     //Zerando minha velocidade
     velh = 0;
-    velv = 0;
+    if (pulo_timer == 0) velv = 0;
     
     aplica_velocidade();
     
     //Se eu pulei
-    if (jump)
+    if (jump or pulo_timer)
     {
         //Indo para o estado de pulo
         estado = estado_pulo;
@@ -147,6 +181,12 @@ estado_pulo = function()
     troca_sprite(spr_player_jump);
     
     aplica_velocidade();
+    
+    if (coyote_timer > 0 and jump)
+    {
+        velv = -max_velv;
+        coyote_timer = 0;
+    }
     
     //Se eu não estiver me movendo
     if (chao)
