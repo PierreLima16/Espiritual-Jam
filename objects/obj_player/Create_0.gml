@@ -6,6 +6,7 @@ max_velh = 4;
 max_velv = 10;
 
 grav  = 0.5;
+dir   = 1;
 
 right = false;
 left  = false;
@@ -30,6 +31,7 @@ aplica_velocidade = function()
     
     //Movimentando
     velh = (right - left) * max_velh;
+    dir = sign(velh);
     
     //Se estou no chao
     if (!chao)
