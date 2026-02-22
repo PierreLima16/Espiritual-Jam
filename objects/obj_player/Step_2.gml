@@ -1,1 +1,1 @@
-sistema_colisao();
+event_inherited();

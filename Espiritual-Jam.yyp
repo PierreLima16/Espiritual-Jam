@@ -36,6 +36,8 @@
   "name":"Espiritual-Jam",
   "resources":[
     {"id":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},},
+    {"id":{"name":"obj_entidade","path":"objects/obj_entidade/obj_entidade.yy",},},
+    {"id":{"name":"obj_player_espectral","path":"objects/obj_player_espectral/obj_player_espectral.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},},

@@ -1,9 +1,11 @@
+event_inherited();
+
 velh     = 0;
 velv     = 0;
-max_velh = 3;
-max_velv = 4;
+max_velh = 4;
+max_velv = 10;
 
-grav  = 0.2;
+grav  = 0.5;
 
 right = false;
 left  = false;
@@ -14,15 +16,10 @@ qtd_pulos = 1;
 chao  = false;
 
 estado = noone;
+estado_txt = "";
 
-//Método para pegar os inputs do player
-pega_input = function()
-{
-    //Inputs de movimentos básicos
-    right = keyboard_check(vk_right);
-    left  = keyboard_check(vk_left);
-    jump  = keyboard_check(vk_up);
-}
+#region Inputs / colisao / aplicador de velocidade
+
 
 //Método para aplicar velocidade
 aplica_velocidade = function()
@@ -62,40 +59,79 @@ colisores = function()
     chao = place_meeting(x, y + 1, obj_colisao);
 }
 
-sistema_colisao = function()
+
+
+#endregion
+
+#region Estados do player
+
+//Estado parado
+estado_parado = function()
 {
-    //Colisão horizontal
-    repeat(abs(velh))
-    { 
-        var _velh = sign(velh);
+    //estado debug
+    estado_txt = "Parado";
     
-        if (place_meeting(x + _velh, y, obj_colisao))
-        {
-           velh = 0;
-            
-            break;
-        }
-        else
-        {
-            x += _velh;
-        }
+    //Zerando minha velocidade
+    velh = 0;
+    velv = 0;
+    
+    aplica_velocidade();
+    
+    
+    //Se eu pulei
+    if (jump)
+    {
+        //Indo para o estado de pulo
+        estado = estado_pulo;
     }
     
-    //Colisão vertical
-    repeat(abs(velv))
+    //Se eu apertei para algum lado
+    if (right xor left)
     {
-        var _velv = sign(velh);
-        
-        if (place_meeting(x, y + _velv, obj_colisao))
-        {
-            velv = 0;
-            
-            break;
-        }
-        else
-        {
-            y += _velv;
-        }
+        //Indo para o estado de movendo
+        estado = estado_movendo;
+    }
+}
+
+//Estado de pulo
+estado_pulo = function()
+{
+    estado_txt = "Pulando";
+    
+    aplica_velocidade();
+    
+    
+    //Se eu não estiver me movendo
+    if (chao)
+    {
+        //Indo para o estado de parado
+        estado = estado_parado;
     }
     
 }
+
+//Estado de movendo
+estado_movendo = function()
+{
+    estado_txt = "Movendo";
+    
+    aplica_velocidade();
+    
+    //Se minha velocidade horizontal for zero
+    if (velh == 0 and chao)
+    {
+        //Eu vou para o estado de parado
+        estado = estado_parado;
+    }
+    
+    //Apertei para pular
+    if (jump)
+    {
+        //Vou para o estado de pulo
+        estado = estado_pulo;
+    }
+}
+
+#endregion
+
+estado = estado_parado;

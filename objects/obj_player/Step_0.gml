@@ -1,3 +1,5 @@
+event_inherited();
+
 colisores();
-pega_input();
-aplica_velocidade();
+
+estado();
