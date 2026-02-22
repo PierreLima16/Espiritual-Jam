@@ -62,7 +62,7 @@ estado_parado = function()
     
     if (normal)
     {
-        estado = estado_voltando_normal;
+        estado = estado_normal;
     }
     
 }
@@ -80,7 +80,7 @@ estado_movendo = function()
     
     if (normal)
     {
-        estado = estado_voltando_normal;
+        estado = estado_normal;
     }
 }
 
@@ -88,11 +88,14 @@ estado_normal = function()
 {
     estado_txt = "Mundo normal";
     
+    /*
     var _player_normal = instance_create_layer(x, y, layer, obj_player);
     _player_normal.timer_recarrega = _player_normal.tempo_recarrega;
     _player_normal.dir = dir;
+    */
     
     global.espectral = false;
+    global.mundo     = "Normal";
     
     instance_destroy();
     

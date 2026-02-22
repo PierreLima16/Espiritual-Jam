@@ -26,21 +26,18 @@ segue_player = function()
 {
     if (instance_exists(obj_player))
     {
-        alvo = obj_player;
-        
-        x = lerp(x, alvo.x, 0.1);
-        y = lerp(y, alvo.y, 0.1);
+        if (global.mundo == "Normal")
+        {
+            alvo = obj_player;
+        }
     }
-    else if (instance_exists(obj_player_espectral))
+    
+    if (instance_exists(obj_player_espectral))
     {
-        alvo = obj_player_espectral;
-        
-        x = lerp(x, alvo.x, 0.1);
-        y = lerp(y, alvo.y, 0.1);
-    }
-    else
-    {
-        estado = segue_nada;
+        if (global.mundo == "Espiritual")
+        {
+            alvo = obj_player_espectral;
+        }
     }
     
     segue_alvo();

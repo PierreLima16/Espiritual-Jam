@@ -1,2 +1,2 @@
-estado = estado_voltando_normal;
+estado = estado_normal;
 global.espectral = false;

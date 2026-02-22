@@ -166,7 +166,7 @@ estado_parado = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_indo_espectro;
+        estado = estado_espectro;
     }
 }
 
@@ -199,7 +199,7 @@ estado_pulo = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_indo_espectro;
+        estado = estado_espectro;
     }
 }
 
@@ -233,7 +233,7 @@ estado_movendo = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_indo_espectro;
+        estado = estado_espectro;
     }
 }
 
@@ -244,11 +244,32 @@ estado_espectro = function()
     var _player_espectro = instance_create_layer(x, y, layer, obj_player_espectral);
     _player_espectro.dir = dir;
     
-    instance_destroy();
+    global.mundo = "Espiritual";
+    
+    estado = estado_repouso;
+    //instance_destroy();
     
     with(obj_camera)
     {
         alvo = _player_espectro;
+    }
+}
+
+estado_repouso = function()
+{
+    estado_txt = "Repouso";
+    
+    velh = 0;
+    
+    if (!chao)
+    {
+        velv += grav;
+    }
+    
+    
+    if (global.mundo == "Normal")
+    {
+        estado = estado_parado;
     }
 }
 
