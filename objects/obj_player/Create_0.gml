@@ -166,7 +166,7 @@ estado_parado = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_espectro;
+        estado = estado_indo_espectro;
     }
 }
 
@@ -199,7 +199,7 @@ estado_pulo = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_espectro;
+        estado = estado_indo_espectro;
     }
 }
 
@@ -233,7 +233,7 @@ estado_movendo = function()
     if (espectal and global.espectral)
     {
         //Eu entro no mundo espectral
-        estado = estado_espectro;
+        estado = estado_indo_espectro;
     }
 }
 
@@ -241,7 +241,7 @@ estado_espectro = function()
 {
     estado_txt = "Espectral";
     
-    var _player_espectro = instance_create_layer(x, y, layer, obj_player_espectral);
+    var _player_espectro = instance_create_depth(x, y, depth - 1, obj_player_espectral);
     _player_espectro.dir = dir;
     
     global.mundo = "Espiritual";
@@ -260,12 +260,9 @@ estado_repouso = function()
     estado_txt = "Repouso";
     
     velh = 0;
+    velv = 0;
     
-    if (!chao)
-    {
-        velv += grav;
-    }
-    
+    troca_sprite(spr_player_repouso);
     
     if (global.mundo == "Normal")
     {
