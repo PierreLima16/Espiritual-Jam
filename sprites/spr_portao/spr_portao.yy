@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"spr_portao",
   "bboxMode":0,
-  "bbox_bottom":63,
+  "bbox_bottom":47,
   "bbox_left":0,
   "bbox_right":31,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"72be7cd7-0178-488c-8e55-9e6f63b089b6","name":"72be7cd7-0178-488c-8e55-9e6f63b089b6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c66b407c-2b0b-43a2-a8bc-5c4c7dd3739a","name":"c66b407c-2b0b-43a2-a8bc-5c4c7dd3739a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":48,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"ed64d156-4f18-49b7-a3da-b2c85ceebe45","blendMode":0,"displayName":"default","isLocked":false,"name":"ed64d156-4f18-49b7-a3da-b2c85ceebe45","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f1365086-c0a0-4208-acb4-62cafe96cf1f","blendMode":0,"displayName":"default","isLocked":false,"name":"f1365086-c0a0-4208-acb4-62cafe96cf1f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_portao",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"72be7cd7-0178-488c-8e55-9e6f63b089b6","path":"sprites/spr_portao/spr_portao.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"05365afc-2473-4844-9487-55bebedb2847","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c66b407c-2b0b-43a2-a8bc-5c4c7dd3739a","path":"sprites/spr_portao/spr_portao.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"40a2b195-27d9-4495-bdd0-2e5839c6a094","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
