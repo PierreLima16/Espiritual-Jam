@@ -5,6 +5,8 @@ max_velv = 10;
 
 dir = 1;
 
+colisoes = [obj_colisao];
+
 
 acabou_animacao = function()
 {
@@ -38,7 +40,7 @@ sistema_colisao = function()
     { 
         var _velh = sign(velh);
     
-        if (place_meeting(x + _velh, y, obj_colisao))
+        if (place_meeting(x + _velh, y, colisoes))
         {
            velh = 0;
             
@@ -55,7 +57,7 @@ sistema_colisao = function()
     {
         var _velv = sign(velv);
         
-        if (place_meeting(x, y + _velv, obj_colisao))
+        if (place_meeting(x, y + _velv, colisoes))
         {
             velv = 0;
             

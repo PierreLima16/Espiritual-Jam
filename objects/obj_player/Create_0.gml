@@ -17,6 +17,8 @@ right = false;
 left  = false;
 jump  = false;
 
+colisoes = [obj_colisao, obj_colisao_2];
+
 tempo_recarrega = room_speed * 1.5;
 timer_recarrega = 0;
 
@@ -105,7 +107,7 @@ aplica_velocidade = function()
 
 colisores = function()
 {
-    chao = place_meeting(x, y + 1, obj_colisao);
+    chao = place_meeting(x, y + 1, colisoes);
 }
 
 //Método para pegar os inputs do player
