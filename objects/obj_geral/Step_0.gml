@@ -6,6 +6,9 @@ if (global.mundo == "Normal")
     
     //Desativando minha layer de efeitos
     layer_enable_fx("Mundo_espiritual", false);
+    
+    //Deixando a layer invisivel
+    layer_set_visible("Espectral", false);
 }
 
 if (global.mundo == "Espiritual")
@@ -14,4 +17,9 @@ if (global.mundo == "Espiritual")
     
     //Ativando minha layer de efeitos
     layer_enable_fx("Mundo_espiritual", true);
+    
+    //Deixando a layer visivel
+    layer_set_visible("Espectral", true);
 }
+
+global.chaves = instance_number(obj_chave);

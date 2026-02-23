@@ -12,6 +12,7 @@ alarm[0] = room_speed * 2;
 
 alvo = id;
 
+colisoes = [obj_colisao, obj_portao];
 
 
 pega_input = function()

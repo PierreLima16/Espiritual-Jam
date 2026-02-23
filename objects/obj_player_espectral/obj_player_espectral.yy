@@ -40,6 +40,9 @@
     "name":"spr_player_espectro",
     "path":"sprites/spr_player_espectro/spr_player_espectro.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_player_idle",
+    "path":"sprites/spr_player_idle/spr_player_idle.yy",
+  },
   "visible":true,
 }
