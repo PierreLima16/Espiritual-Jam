@@ -34,6 +34,7 @@
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gm_filter_colour_balance-1.0.0","name":"io.gamemaker.gm_filter_colour_balance-1.0.0","path":"io.gamemaker.gm_filter_colour_balance-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_colourise-1.0.0","name":"io.gamemaker.gm_filter_colourise-1.0.0","path":"io.gamemaker.gm_filter_colourise-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_underwater-1.0.0","name":"io.gamemaker.gm_filter_underwater-1.0.0","path":"io.gamemaker.gm_filter_underwater-1.0.0.yyp",},
   ],
   "IncludedFiles":[],
   "isEcma":false,
@@ -47,6 +48,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_chave","path":"objects/obj_chave/obj_chave.yy",},},
     {"id":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},},
+    {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},},
     {"id":{"name":"obj_entidade","path":"objects/obj_entidade/obj_entidade.yy",},},
     {"id":{"name":"obj_geral","path":"objects/obj_geral/obj_geral.yy",},},
     {"id":{"name":"obj_grade","path":"objects/obj_grade/obj_grade.yy",},},
