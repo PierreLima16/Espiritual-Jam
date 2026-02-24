@@ -1,14 +1,14 @@
 // Inherit the parent event
 event_inherited();
 
-max_velh = 4;
-max_velv = 4;
+max_velh = 2;
+max_velv = 2;
 
 estado = noone;
 
 estado_txt = "";
 
-alarm[0] = room_speed * 2;
+alarm[0] = room_speed * 3;
 
 alvo = id;
 
@@ -19,8 +19,8 @@ pega_input = function()
 {
     right = keyboard_check(vk_right);
     left  = keyboard_check(vk_left);
-    down = keyboard_check(vk_down);
-    up  = keyboard_check(vk_up);
+    down  = keyboard_check(vk_down);
+    up    = keyboard_check(vk_up);
     
     normal = keyboard_check_pressed(ord("R"));
 }
@@ -63,7 +63,7 @@ estado_parado = function()
     
     if (normal)
     {
-        estado = estado_normal;
+        estado = estado_voltando_normal;
     }
     
 }
@@ -81,7 +81,7 @@ estado_movendo = function()
     
     if (normal)
     {
-        estado = estado_normal;
+        estado = estado_voltando_normal;
     }
 }
 
@@ -110,6 +110,7 @@ estado_voltando_normal = function()
     velh = 0;
     velv = 0;
     
+    /*
     troca_sprite(spr_player_saindo_espectro);
     
     //Quando minha animação chegar ao fim
@@ -118,6 +119,13 @@ estado_voltando_normal = function()
         //Vou para o estado de espectro
         estado = estado_normal;
     }
+    */
+    
+    x = lerp(x, obj_player.x, 0.1);
+    y = lerp(y, obj_player.y, 0.1);
+    
+    if (place_meeting(x, y, obj_player)) estado = estado_normal;
+    
 }
 
 estado = estado_parado;

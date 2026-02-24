@@ -32,6 +32,11 @@ alvo = id;
 //Criando a câmera ao nascer
 var _cam = instance_create_layer(x, y, layer, obj_camera);
 
+keyboard_set_map(ord("J"), ord("R"));
+keyboard_set_map(ord("W"), vk_up);
+keyboard_set_map(ord("A"), vk_left);
+keyboard_set_map(ord("D"), vk_right);
+keyboard_set_map(ord("S"), vk_down);
 
 #region Inputs / colisao / aplicador de velocidade
 
