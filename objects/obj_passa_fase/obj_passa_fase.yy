@@ -30,7 +30,7 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"room_destino","filters":[
         "GMRoom",
-      ],"listItems":[],"multiselect":false,"name":"room_destino","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_fase1","path":"rooms/rm_fase1/rm_fase1.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_fase1","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"room_destino","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_tutorial_1","path":"rooms/rm_tutorial_1/rm_tutorial_1.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_tutorial_1","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

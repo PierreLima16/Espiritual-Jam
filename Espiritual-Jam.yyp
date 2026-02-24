@@ -15,8 +15,8 @@
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Geral","folderPath":"folders/Objects/Geral.yy","name":"Geral","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Colisores","folderPath":"folders/Objects/Colisores.yy","name":"Colisores","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Geral","folderPath":"folders/Objects/Geral.yy","name":"Geral","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objetos","folderPath":"folders/Objects/Objetos.yy","name":"Objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Players","folderPath":"folders/Objects/Players.yy","name":"Players","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -64,8 +64,8 @@
     {"id":{"name":"obj_player_espectral","path":"objects/obj_player_espectral/obj_player_espectral.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_portao","path":"objects/obj_portao/obj_portao.yy",},},
-    {"id":{"name":"rm_fase1","path":"rooms/rm_fase1/rm_fase1.yy",},},
     {"id":{"name":"rm_modelo","path":"rooms/rm_modelo/rm_modelo.yy",},},
+    {"id":{"name":"rm_tutorial_1","path":"rooms/rm_tutorial_1/rm_tutorial_1.yy",},},
     {"id":{"name":"scr_globais","path":"scripts/scr_globais/scr_globais.yy",},},
     {"id":{"name":"spr_bg_2","path":"sprites/spr_bg_2/spr_bg_2.yy",},},
     {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},},
@@ -89,7 +89,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_modelo","path":"rooms/rm_modelo/rm_modelo.yy",},},
-    {"roomId":{"name":"rm_fase1","path":"rooms/rm_fase1/rm_fase1.yy",},},
+    {"roomId":{"name":"rm_tutorial_1","path":"rooms/rm_tutorial_1/rm_tutorial_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

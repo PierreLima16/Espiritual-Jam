@@ -72,6 +72,7 @@ sistema_colisao = function()
     #endregion
     
     
+    
     /*
     move_and_collide(velh, 0, obj_colisao, 24);
     move_and_collide(0, velv, obj_colisao, 24);
