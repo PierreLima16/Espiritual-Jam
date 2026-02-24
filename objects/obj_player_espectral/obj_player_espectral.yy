@@ -12,8 +12,8 @@
   "name":"obj_player_espectral",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Players",
+    "path":"folders/Objects/Players.yy",
   },
   "parentObjectId":{
     "name":"obj_entidade",

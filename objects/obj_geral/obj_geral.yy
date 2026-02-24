@@ -10,8 +10,8 @@
   "name":"obj_geral",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Geral",
+    "path":"folders/Objects/Geral.yy",
   },
   "parentObjectId":null,
   "persistent":true,

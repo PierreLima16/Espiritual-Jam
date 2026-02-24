@@ -1,1 +1,1 @@
-draw_text(20, 20, global.chaves);
+desenha_gui(global.chaves);
