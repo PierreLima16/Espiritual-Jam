@@ -4,10 +4,16 @@ if (other.velv > 0)
     {
         image_index = 2;
         
+        
         with(obj_grade)
         {
-            estado = estado_abrindo;
+            if (indice == obj_botao.indice)
+            {
+                estado = estado_abrindo;
+            }
+            
         }
+        
     }
 }
 
