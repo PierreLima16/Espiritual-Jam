@@ -30,19 +30,18 @@ efeito_mundo = function()
             
             if (_incremento != 0)
             {
-                _incremento -= 0.03;
-            }
+                _incremento -= 0.1;
+            } 
             else
             {
                 layer_destroy("Espiritos");
-            } 
+            }
                 
             fx_set_parameter(_fx, "g_Intensity", _incremento);
                 
             layer_set_fx("Espiritos", _fx);
             
         }
-        
         /*
         //Desativando minha layer de efeitos
         layer_enable_fx("Mundo_espiritual", false);
@@ -57,7 +56,7 @@ efeito_mundo = function()
         
         if (!layer_exists("Espiritos"))
         {
-            _lay = layer_create(399, "Espiritos");
+            _lay = layer_create(400, "Espiritos");
             
         }
         else
@@ -66,7 +65,7 @@ efeito_mundo = function()
             
             fx_set_parameter(_fx, "g_TintCol", [35, 218, 255]);
             
-            if (_incremento != 1) _incremento += 0.03;
+            if (_incremento != 1) _incremento += 0.1;
                 
             fx_set_parameter(_fx, "g_Intensity", _incremento);
                 
