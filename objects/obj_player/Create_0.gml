@@ -29,8 +29,12 @@ estado_txt = "";
 
 alvo = id;
 
-//Criando a câmera ao nascer
-var _cam = instance_create_layer(x, y, layer, obj_camera);
+if (!instance_exists(obj_camera))
+{
+    //Criando a câmera ao nascer
+    var _cam = instance_create_layer(x, y, layer, obj_camera);
+}
+
 
 keyboard_set_map(ord("J"), ord("R"));
 keyboard_set_map(ord("W"), vk_up);

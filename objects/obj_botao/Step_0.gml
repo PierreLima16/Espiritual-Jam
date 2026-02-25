@@ -5,13 +5,15 @@ if (global.mundo == "Normal")
 }
 else
 {
-    if (instance_exists(obj_grade))
+    var _grade = instance_exists(obj_grade);
+    if (_grade)
     {
         image_index = 1;
     }
-    else
+    else if (obj_grade.indice == indice)
     {
         image_index = 2;
     }
         
 }
+
