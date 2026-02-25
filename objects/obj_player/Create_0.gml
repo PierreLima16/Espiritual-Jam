@@ -1,5 +1,6 @@
 event_inherited();
 
+
 velh     = 0;
 velv     = 0;
 max_velh = 2;
@@ -35,7 +36,7 @@ if (!instance_exists(obj_camera))
     var _cam = instance_create_layer(x, y, layer, obj_camera);
 }
 
-
+//Mepeando as teclas
 keyboard_set_map(ord("J"), ord("R"));
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("A"), vk_left);
@@ -157,6 +158,7 @@ estado_parado = function()
     {
         //Indo para o estado de pulo
         estado = estado_pulo;
+        efeito_squash(0.5, 1.7);
     }
     
     //Se eu apertei para algum lado
@@ -171,6 +173,7 @@ estado_parado = function()
     {
         //Vou para o estado de pulo
         estado = estado_pulo;
+        efeito_squash(0.5, 1.7);
     }
     
     //Se eu apertei R
@@ -204,6 +207,9 @@ estado_pulo = function()
     {
         //Indo para o estado de parado
         estado = estado_parado;
+        
+        if (!pulo_timer or !coyote_timer) efeito_squash(1.4, 0.7);
+        
     }
     
     //Se eu apertei R
@@ -238,6 +244,8 @@ estado_movendo = function()
     {
         //Vou para o estado de pulo
         estado = estado_pulo;
+        
+        efeito_squash(0.5, 1.7);
     }
     
     //Se eu apertei R
@@ -245,6 +253,12 @@ estado_movendo = function()
     {
         //Eu entro no mundo espectral
         estado = estado_indo_espectro;
+    }
+    
+    if (!chao)
+    {
+        estado = estado_pulo;
+        efeito_squash(0.5, 1.7);
     }
 }
 
@@ -258,6 +272,7 @@ estado_espectro = function()
     global.mundo = "Espiritual";
     
     estado = estado_repouso;
+    //efeito_squash(0.5, 1.7);
     //instance_destroy();
     
     with(obj_camera)

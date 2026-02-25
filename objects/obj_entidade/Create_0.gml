@@ -1,9 +1,11 @@
+
+
 velh     = 0;
 velv     = 0;
 max_velh = 4;
 max_velv = 10;
 
-dir = 1;
+inicia_efeito_squash();
 
 colisoes = [obj_colisao];
 

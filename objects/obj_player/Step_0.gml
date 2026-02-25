@@ -1,4 +1,5 @@
 event_inherited();
+
 colisores();
 
 buffer_pulo();
@@ -6,6 +7,7 @@ coyote_jump();
 
 estado();
 
+retorna_efeito_squash(0.1);
 
 if (timer_recarrega > 0) timer_recarrega--;
     

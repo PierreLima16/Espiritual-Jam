@@ -16,6 +16,10 @@ estado_abrindo = function()
     {
         estado = estado_aberta;
     }
+    else
+    {
+        x = xstart + random_range(-1, 1);
+    }
 }
 
 estado_aberta = function()

@@ -17,39 +17,71 @@ efeito_mundo = function()
     var _lay;
     var _lay_fx;
     var _fx;
-    static _incremento = 0
+    static _incremento = 0;
     
     if (global.mundo == "Normal")
     {
         
+        if (layer_exists("Espiritos"))
+        {
+            _fx = fx_create("_filter_colourise");
+            
+            fx_set_parameter(_fx, "g_TintCol", [35, 218, 255]);
+            
+            if (_incremento != 0)
+            {
+                _incremento -= 0.03;
+            }
+            else
+            {
+                layer_destroy("Espiritos");
+            } 
+                
+            fx_set_parameter(_fx, "g_Intensity", _incremento);
+                
+            layer_set_fx("Espiritos", _fx);
+            
+        }
+        
+        /*
         //Desativando minha layer de efeitos
         layer_enable_fx("Mundo_espiritual", false);
         
         //Deixando a layer invisivel
         layer_set_visible("Espectral", false);
+        */
     }
     
     if (global.mundo == "Espiritual")
     {
-        /*
+        
         if (!layer_exists("Espiritos"))
         {
-            _lay = layer_create(400, "Espiritos");
-            
-            _fx = fx_create("_filter_colourise");
-            fx_set_parameter(_fx, "g_TintCol", [35, 218, 255]);
-            
-            fx_set_parameter(_fx, "g_Intensity", _incremento);
-            
-            layer_set_fx(_lay, _fx);
+            _lay = layer_create(399, "Espiritos");
             
         }
-        */
+        else
+        {
+            _fx = fx_create("_filter_colourise");
+            
+            fx_set_parameter(_fx, "g_TintCol", [35, 218, 255]);
+            
+            if (_incremento != 1) _incremento += 0.03;
+                
+            fx_set_parameter(_fx, "g_Intensity", _incremento);
+                
+            layer_set_fx("Espiritos", _fx);
+            
+        }
         
+        
+        
+        /*
         //Ativando minha layer de efeitos
         layer_enable_fx("Mundo_espiritual", true);
         
         //Deixando a layer visivel
         layer_set_visible("Espectral", true);
+        */
     }
 }

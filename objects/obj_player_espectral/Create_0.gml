@@ -14,6 +14,7 @@ alvo = id;
 
 colisoes = [obj_colisao, obj_portao];
 
+efeito_squash(1.5, 0.6);
 
 pega_input = function()
 {
@@ -64,6 +65,7 @@ estado_parado = function()
     if (normal)
     {
         estado = estado_voltando_normal;
+        efeito_squash(1.7, 0.5);
     }
     
 }
@@ -82,6 +84,7 @@ estado_movendo = function()
     if (normal)
     {
         estado = estado_voltando_normal;
+        efeito_squash(1.2, 0.8);
     }
 }
 
@@ -124,7 +127,11 @@ estado_voltando_normal = function()
     x = lerp(x, obj_player.x, 0.1);
     y = lerp(y, obj_player.y, 0.1);
     
-    if (place_meeting(x, y, obj_player)) estado = estado_normal;
+    if (place_meeting(x, y, obj_player))
+    {
+        estado = estado_normal;
+        efeito_squash(1.3, 0.7);
+    } 
     
 }
 

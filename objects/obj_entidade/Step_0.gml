@@ -1,0 +1,1 @@
+retorna_efeito_squash(0.1);
