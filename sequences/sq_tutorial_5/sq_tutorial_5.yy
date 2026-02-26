@@ -26,8 +26,8 @@
   },
   "name":"sq_tutorial_5",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Sequences de tutorial",
+    "path":"folders/Sequences/Sequences de tutorial.yy",
   },
   "playback":1,
   "playbackSpeed":60.0,
