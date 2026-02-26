@@ -8,4 +8,3 @@ else
     image_index = 1;
     
 }
-

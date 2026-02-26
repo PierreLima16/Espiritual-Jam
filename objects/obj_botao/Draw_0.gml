@@ -1,5 +1,6 @@
 draw_self();
 
+draw_text(x, y, indice);
 /*
 if (instance_exists(obj_player) or instance_exists(obj_player_espectral))
 {
