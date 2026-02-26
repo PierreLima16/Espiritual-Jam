@@ -12,7 +12,7 @@ alarm[0] = room_speed * 2;
 
 alvo = id;
 
-colisoes = [obj_colisao, obj_portao];
+colisoes = [obj_colisao, obj_portao, obj_bloco_duplo];
 
 efeito_squash(1.5, 0.6);
 

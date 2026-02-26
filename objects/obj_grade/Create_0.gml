@@ -32,7 +32,7 @@ desenha_input = function()
             //draw_text_transformed(_x1, _y1, "Aperte", 0.2, 0.2, 0);
             //Eu desenho o input para ser apertado
             draw_sprite_ext(spr_desfaz_barreira, 0, _x1, _y1, 1, 1, 0, c_white, 1);
-            draw_circle(_x1, _y1, raio, 1);
+            //draw_circle(_x1, _y1, raio, 1);
             
             
             if (abrir)

@@ -18,7 +18,7 @@ right = false;
 left  = false;
 jump  = false;
 
-colisoes = [obj_colisao, obj_grade, obj_portao];
+colisoes = [obj_colisao, obj_grade, obj_portao, obj_bloco_duplo];
 
 tempo_recarrega = room_speed * 1.5;
 timer_recarrega = 0;
