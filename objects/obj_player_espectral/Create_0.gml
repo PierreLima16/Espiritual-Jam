@@ -1,8 +1,8 @@
 // Inherit the parent event
 event_inherited();
 
-max_velh = 2;
-max_velv = 2;
+max_velh = 3;
+max_velv = 3;
 
 estado = noone;
 
