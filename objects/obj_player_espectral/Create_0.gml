@@ -8,7 +8,7 @@ estado = noone;
 
 estado_txt = "";
 
-alarm[0] = room_speed * 2;
+alarm[0] = room_speed * 2.5;
 
 alvo = id;
 

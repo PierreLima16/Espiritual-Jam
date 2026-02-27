@@ -95,6 +95,8 @@ aplica_velocidade = function()
     }
     else //Não estou no chao
     {
+        //Resetando o valor máximo da minha velocidade vertical
+        max_velv = 6;
         //Reseto a quantidade de pulos
         qtd_pulos = 1;
         
@@ -196,6 +198,7 @@ estado_pulo = function()
     troca_sprite(spr_player_jump);
     
     aplica_velocidade();
+    
     
     if (coyote_timer > 0 and jump)
     {
