@@ -20,6 +20,8 @@ jump  = false;
 
 colisoes = [obj_colisao, obj_grade, obj_portao, obj_bloco_duplo];
 
+global.qtd = qtd;
+
 tempo_recarrega = room_speed * 1.5;
 timer_recarrega = 0;
 
@@ -37,7 +39,7 @@ if (!instance_exists(obj_camera))
 }
 
 //Mepeando as teclas
-keyboard_set_map(ord("J"), ord("R"));
+//keyboard_set_map(ord("J"), ord("J"));
 keyboard_set_map(ord("W"), vk_up);
 keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
@@ -132,7 +134,7 @@ pega_input = function()
     jump  = keyboard_check_pressed(vk_up);
     
     //Input para mudar de mundo
-    espectal = keyboard_check_pressed(ord("R"));
+    espectal = keyboard_check_pressed(ord("J"));
 }
 
 #endregion
@@ -180,10 +182,11 @@ estado_parado = function()
     }
     
     //Se eu apertei R
-    if (espectal and global.espectral)
+    if (espectal and global.espectral and global.qtd > 0)
     {
         //Eu entro no mundo espectral
         estado = estado_indo_espectro;
+        global.qtd--;
     }
 }
 
@@ -217,10 +220,12 @@ estado_pulo = function()
     }
     
     //Se eu apertei R
-    if (espectal and global.espectral)
+    if (espectal and global.espectral and global.qtd > 0)
     {
         //Eu entro no mundo espectral
         estado = estado_indo_espectro;
+        
+        global.qtd--;
     }
 }
 
@@ -253,10 +258,12 @@ estado_movendo = function()
     }
     
     //Se eu apertei R
-    if (espectal and global.espectral)
+    if (espectal and global.espectral and global.qtd > 0)
     {
         //Eu entro no mundo espectral
         estado = estado_indo_espectro;
+        
+        global.qtd--;
     }
     
     if (!chao)
@@ -270,8 +277,10 @@ estado_espectro = function()
 {
     estado_txt = "Espectral";
     
+    
     var _player_espectro = instance_create_depth(x, y, depth - 1, obj_player_espectral);
     _player_espectro.dir = dir;
+    
     
     global.mundo = "Espiritual";
     
@@ -291,6 +300,7 @@ estado_repouso = function()
     
     velh = 0;
     velv = 0;
+    
     
     troca_sprite(spr_player_repouso);
     

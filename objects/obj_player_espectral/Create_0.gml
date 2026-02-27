@@ -23,7 +23,7 @@ pega_input = function()
     down  = keyboard_check(vk_down);
     up    = keyboard_check(vk_up);
     
-    normal = keyboard_check_pressed(ord("R"));
+    normal = keyboard_check_pressed(ord("J"));
 }
 
 colisores = function()

@@ -1,10 +1,10 @@
 
-desenha_gui = function(_qtd)
+desenha_gui = function(_qtd, _spr, _y, _scale)
 {
     var _marg = 0;
     repeat(_qtd)
     {
-        draw_sprite_ext(spr_chave, 0, 40 + _marg, 30, 3, 3, 0, c_white, 1);
+        draw_sprite_ext(_spr, 0, 40 + _marg, _y, _scale, _scale, 0, c_white, 1);
         _marg += 50;
     }
 }
@@ -56,7 +56,8 @@ efeito_mundo = function()
         
         if (!layer_exists("Espiritos"))
         {
-            _lay = layer_create(400, "Espiritos");
+            var _depth = layer_get_depth("Player");
+            _lay = layer_create(300, "Espiritos");
             
         }
         else
