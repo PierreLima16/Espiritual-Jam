@@ -14,10 +14,7 @@
     "name":"Objetos",
     "path":"folders/Objects/Objetos.yy",
   },
-  "parentObjectId":{
-    "name":"obj_controle",
-    "path":"objects/obj_controle/obj_controle.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

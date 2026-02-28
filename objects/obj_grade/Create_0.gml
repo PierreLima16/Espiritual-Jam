@@ -21,7 +21,8 @@ desenha_input = function()
             
         
         //Pegando a distancia entre mim o player
-        var _dist = point_distance(x, y, obj_player_espectral.x, obj_player_espectral.y);
+        //var _dist = point_distance(x, y, obj_player_espectral.x, obj_player_espectral.y);
+        var _dist = point_distance(obj_player_espectral.x, obj_player_espectral.y, x, y);
         
         //Se a distancia for menor que 100 pixels
         if (_dist < raio)
