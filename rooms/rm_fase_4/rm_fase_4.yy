@@ -51,7 +51,6 @@
     {"name":"inst_5A3BF850","path":"rooms/rm_fase_4/rm_fase_4.yy",},
     {"name":"inst_30E8F185","path":"rooms/rm_fase_4/rm_fase_4.yy",},
     {"name":"inst_35C2DFEB","path":"rooms/rm_fase_4/rm_fase_4.yy",},
-    {"name":"inst_78B19EC7","path":"rooms/rm_fase_4/rm_fase_4.yy",},
     {"name":"inst_64C5A286","path":"rooms/rm_fase_4/rm_fase_4.yy",},
     {"name":"inst_5A46CCAA","path":"rooms/rm_fase_4/rm_fase_4.yy",},
     {"name":"inst_52DC1E63","path":"rooms/rm_fase_4/rm_fase_4.yy",},
@@ -74,7 +73,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_grade","path":"objects/obj_grade/obj_grade.yy",},"propertyId":{"name":"abrir","path":"objects/obj_grade/obj_grade.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":90.0,"scaleX":1.0,"scaleY":2.0,"x":336.0,"y":528.0,},
         {"$GMRInstance":"v4","%Name":"inst_35C2DFEB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_35C2DFEB","objectId":{"name":"obj_grade","path":"objects/obj_grade/obj_grade.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":368.0,},
-        {"$GMRInstance":"v4","%Name":"inst_78B19EC7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_78B19EC7","objectId":{"name":"obj_grade","path":"objects/obj_grade/obj_grade.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":368.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Espectral","depth":301,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Espectral","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Solidos","depth":401,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

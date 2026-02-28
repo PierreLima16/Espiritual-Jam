@@ -24,15 +24,15 @@
   "name":"spr_colisao",
   "nineSlice":{
     "$GMNineSliceData":"",
-    "bottom":13,
+    "bottom":14,
     "enabled":true,
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,
     "highlightStyle":0,
-    "left":13,
+    "left":14,
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
-    "right":13,
+    "right":14,
     "tileMode":[
       1,
       1,
@@ -40,7 +40,7 @@
       1,
       0,
     ],
-    "top":13,
+    "top":14,
   },
   "origin":0,
   "parent":{
