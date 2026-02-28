@@ -10,8 +10,8 @@
   "name":"obj_passa_fase",
   "overriddenProperties":[],
   "parent":{
-    "name":"Geral",
-    "path":"folders/Objects/Geral.yy",
+    "name":"Colisores",
+    "path":"folders/Objects/Colisores.yy",
   },
   "parentObjectId":null,
   "persistent":false,
