@@ -104,6 +104,7 @@
     {"id":{"name":"scr_globais","path":"scripts/scr_globais/scr_globais.yy",},},
     {"id":{"name":"scr_transicao","path":"scripts/scr_transicao/scr_transicao.yy",},},
     {"id":{"name":"sq_transicao1","path":"sequences/sq_transicao1/sq_transicao1.yy",},},
+    {"id":{"name":"sq_transicao2","path":"sequences/sq_transicao2/sq_transicao2.yy",},},
     {"id":{"name":"sq_tutorial_1","path":"sequences/sq_tutorial_1/sq_tutorial_1.yy",},},
     {"id":{"name":"sq_tutorial_2","path":"sequences/sq_tutorial_2/sq_tutorial_2.yy",},},
     {"id":{"name":"sq_tutorial_3","path":"sequences/sq_tutorial_3/sq_tutorial_3.yy",},},
