@@ -4,6 +4,7 @@ raio = 70;
 
 estado_abrindo = function()
 {
+    instance_create_layer(x + sprite_width/2, y + sprite_width/2, layer, obj_part_barreira);
     instance_destroy();
 }
 

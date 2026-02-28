@@ -32,8 +32,7 @@ controla_menu = function()
         {
             //JOGAR
             case 0:
-                cria_transicao(sq_transicao1);
-                global.destino = rm_tutorial_1;
+                cria_transicao_inicia(rm_tutorial_1);
                 
             break;
         
