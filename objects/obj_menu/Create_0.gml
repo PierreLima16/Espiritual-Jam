@@ -1,0 +1,107 @@
+menu = ["JOGAR", "CRÉDITOS"];
+indice = 0;
+
+pos = 40;
+scale = 1.3;
+
+controla_menu = function()
+{
+    var _apertei = keyboard_check_released(vk_enter);
+    
+    if (keyboard_check_pressed(vk_up))
+    {
+        indice -= 1;
+        
+        pos = 0;
+        
+        scale = 1
+    } 
+    if (keyboard_check_pressed(vk_down))
+    {
+        indice += 1;
+        
+        pos = 0;
+        
+        scale = 1;
+    } 
+    
+    
+    if (_apertei)
+    {
+        switch(indice)
+        {
+            //JOGAR
+            case 0:
+                show_message("Vou jogar");
+                
+            break;
+        
+            case 1:
+                show_message("Ver créditos");
+                
+            break;
+        }
+    }    
+    
+    indice = clamp(indice, 0, array_length(menu) - 1);
+    pos = lerp(pos, 40, 0.1);
+    scale = lerp(scale, 1.3, 0.1);
+}
+
+desenha_menu = function()
+{
+    //Pegando as dimensões da minha GUI
+    var _gui_w = display_get_gui_width();
+    var _gui_h = display_get_gui_height() /2
+    
+    //Definindo a fonte
+    draw_set_font(fnt_tutorial);
+    
+    //Alinhando meu texto
+    draw_set_valign(0);
+    draw_set_halign(0);
+    
+    //Iniciando a margem
+    var _marg_y = 0;
+    
+    //Passando por todo meu array
+    for (var i = 0; i < array_length(menu); i++)
+    {
+        var _cor = c_white;
+        var _pos = 1;
+        var _scale = 1;
+        
+        var _alt = string_height("I");
+        
+        if (i == indice)
+        {
+            _cor = c_aqua;
+            
+            _pos = pos;
+            
+            _scale = scale;
+            
+        }
+        
+        
+        draw_set_colour(_cor)
+        //Desenhando as opções
+        draw_text_transformed(30 + _pos, _gui_h + (i * 1.3) * _alt - 100, menu[i], _scale, _scale, 0);
+        
+        draw_set_colour(-1);
+        
+        //Passando por todo meu array
+        for (var j = 0; j < array_length(menu); j++)
+        {
+            //Incrementando a margem entres as opções
+            _marg_y += 30;
+        }
+        
+    }
+    //Resetando a fonte
+    draw_set_font(-1);
+    
+    //Resetando o alinhamento
+    draw_set_valign(-1);
+    draw_set_halign(-1);
+}

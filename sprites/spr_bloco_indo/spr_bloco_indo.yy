@@ -50,8 +50,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Bloco duplo",
-    "path":"folders/Sprites/Bloco duplo.yy",
+    "name":"Blocos",
+    "path":"folders/Sprites/Blocos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
