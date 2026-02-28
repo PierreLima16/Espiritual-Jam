@@ -51,7 +51,9 @@ estado_parado = function()
     
     aplica_velocidade();
       
-      
+    //var _onda = sin(2 * get_timer()/1000000);
+    
+    
     if (right xor left)
     {
         estado = estado_movendo;
@@ -75,6 +77,8 @@ estado_movendo = function()
     estado_txt = "MOVENDO";
     
     aplica_velocidade();
+    
+    instance_create_depth(x, y, depth + 1, obj_espirito_exp);
     
     if (!(right or left or down or up))
     {
@@ -113,6 +117,8 @@ estado_voltando_normal = function()
     velh = 0;
     velv = 0;
     
+    instance_create_depth(x, y, depth + 1, obj_espirito_exp);
+    
     /*
     troca_sprite(spr_player_saindo_espectro);
     
@@ -131,6 +137,7 @@ estado_voltando_normal = function()
     {
         estado = estado_normal;
         efeito_squash(1.3, 0.7);
+        instance_destroy(obj_espirito_exp);
     } 
     
 }

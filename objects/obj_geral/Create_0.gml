@@ -18,9 +18,16 @@ efeito_mundo = function()
     var _lay_fx;
     var _fx;
     static _incremento = 0;
+    static _vel_x = 0;
+    static _vel_y = 0;
     
     if (global.mundo == "Normal")
     {
+        _vel_x = lerp(_vel_x, -0.2, 0.02);
+        _vel_y = lerp(_vel_y, 0.2, 0.02);
+        //Voltando a velocidade ao normal
+        layer_hspeed("Background", _vel_x);
+        layer_vspeed("Background", _vel_y);
         
         if (layer_exists("Espiritos"))
         {
@@ -53,6 +60,11 @@ efeito_mundo = function()
     
     if (global.mundo == "Espiritual")
     {
+        _vel_x = lerp(_vel_x, -0.05, 0.02);
+        _vel_y = lerp(_vel_y, 0.05, 0.02);
+        //Voltando a velocidade ao normal
+        layer_hspeed("Background", _vel_x);
+        layer_vspeed("Background", _vel_y);
         
         if (!layer_exists("Espiritos"))
         {

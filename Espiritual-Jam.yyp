@@ -75,6 +75,7 @@
     {"id":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},},
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},},
     {"id":{"name":"obj_entidade","path":"objects/obj_entidade/obj_entidade.yy",},},
+    {"id":{"name":"obj_espirito_exp","path":"objects/obj_espirito_exp/obj_espirito_exp.yy",},},
     {"id":{"name":"obj_geral","path":"objects/obj_geral/obj_geral.yy",},},
     {"id":{"name":"obj_grade","path":"objects/obj_grade/obj_grade.yy",},},
     {"id":{"name":"obj_gui_tutorial","path":"objects/obj_gui_tutorial/obj_gui_tutorial.yy",},},
@@ -152,6 +153,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_tutorial_3","path":"rooms/rm_tutorial_3/rm_tutorial_3.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_tutorial_1","path":"rooms/rm_tutorial_1/rm_tutorial_1.yy",},},
     {"roomId":{"name":"rm_fase_10","path":"rooms/rm_fase_10/rm_fase_10.yy",},},
@@ -160,7 +162,6 @@
     {"roomId":{"name":"rm_fase_7","path":"rooms/rm_fase_7/rm_fase_7.yy",},},
     {"roomId":{"name":"rm_fase_3","path":"rooms/rm_fase_3/rm_fase_3.yy",},},
     {"roomId":{"name":"rm_fase_2","path":"rooms/rm_fase_2/rm_fase_2.yy",},},
-    {"roomId":{"name":"rm_tutorial_3","path":"rooms/rm_tutorial_3/rm_tutorial_3.yy",},},
     {"roomId":{"name":"rm_fase_6","path":"rooms/rm_fase_6/rm_fase_6.yy",},},
     {"roomId":{"name":"rm_modelo","path":"rooms/rm_modelo/rm_modelo.yy",},},
     {"roomId":{"name":"rm_fase_5","path":"rooms/rm_fase_5/rm_fase_5.yy",},},

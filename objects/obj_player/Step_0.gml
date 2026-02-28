@@ -1,5 +1,6 @@
 event_inherited();
 
+
 colisores();
 
 buffer_pulo();

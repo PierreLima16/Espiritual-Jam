@@ -4,7 +4,7 @@ raio = 70;
 
 estado_abrindo = function()
 {
-    instance_create_layer(x + sprite_width/2, y + sprite_width/2, layer, obj_part_barreira);
+    instance_create_layer(x, y, layer, obj_part_barreira);
     instance_destroy();
 }
 
@@ -28,8 +28,8 @@ desenha_input = function()
         //Se a distancia for menor que 100 pixels
         if (_dist < raio)
         {
-            var _x1 = x + sprite_width/2;
-            var _y1 = y + sprite_height/2;
+            var _x1 = x;
+            var _y1 = y;
             
             //draw_text_transformed(_x1, _y1, "Aperte", 0.2, 0.2, 0);
             //Eu desenho o input para ser apertado
