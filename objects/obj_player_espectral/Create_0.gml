@@ -16,6 +16,7 @@ colisoes = [obj_colisao, obj_portao, obj_bloco_duplo];
 
 efeito_squash(1.5, 0.6);
 
+
 pega_input = function()
 {
     right = keyboard_check(vk_right);
@@ -48,6 +49,7 @@ estado_parado = function()
     estado_txt = "PARADO";
     velv = 0;
     velh = 0;
+    
     
     aplica_velocidade();
       

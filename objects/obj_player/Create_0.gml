@@ -22,6 +22,10 @@ colisoes = [obj_colisao, obj_grade, obj_portao, obj_bloco_duplo];
 
 global.qtd = qtd;
 
+global.fase_atual = room;
+
+salva_jogo();
+
 tempo_recarrega = room_speed * 1.5;
 timer_recarrega = 0;
 
@@ -36,6 +40,11 @@ if (!instance_exists(obj_camera))
 {
     //Criando a câmera ao nascer
     var _cam = instance_create_layer(x, y, layer, obj_camera);
+}
+
+if (!instance_exists(obj_geral))
+{
+    instance_create_layer(0, 0, "Geral", obj_geral);
 }
 
 //Mepeando as teclas

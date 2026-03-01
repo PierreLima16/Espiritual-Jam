@@ -1,4 +1,4 @@
-menu = ["JOGAR", "CRÉDITOS"];
+menu = ["NOVO JOGO", "CARREGAR JOGO"];
 indice = 0;
 
 pos = 40;
@@ -33,22 +33,27 @@ controla_menu = function()
         {
             //JOGAR
             case 0:
-                //cria_transicao_inicia(rm_save);
-                if (!instance_exists(obj_save))
-                {
-                    instance_create_layer(0, 0, layer, obj_save);
-                }
-                instance_destroy();
+                
+                cria_transicao_inicia(rm_tutorial_1);
                 
             break;
         
             case 1:
-                //carrega_jogo();
-                //cria_transicao_inicia(global.fase_atual);
+                
+                carrega_jogo();
                 
             break;
         }
     }    
+    
+    if (keyboard_check_pressed(vk_escape))
+    {
+        if (!instance_exists(obj_menu))
+        {
+            instance_create_layer(0, 0, layer, obj_menu);
+        }
+        instance_destroy();
+    }
     
     indice = clamp(indice, 0, array_length(menu) - 1);
     pos = lerp(pos, 40, 0.1);

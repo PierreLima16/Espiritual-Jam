@@ -1,0 +1,25 @@
+{
+  "$GMParticleSystem":"",
+  "%Name":"ps_part_player",
+  "backdropHeight":32,
+  "backdropImageOpacity":0.5,
+  "backdropImagePath":"C:\\Users\\Pierr\\Desktop\\ASSETS NONE JAM\\Player\\Player_modelo_espectral.png",
+  "backdropWidth":32,
+  "backdropXOffset":0.0,
+  "backdropYOffset":0.0,
+  "drawOrder":0,
+  "emitters":[
+    {"$GMPSEmitter":"","%Name":"Emitter","additiveBlend":true,"directionIncrease":0.0,"directionMax":82.0,"directionMin":88.0,"directionWiggle":0.0,"distribution":0,"editorColour":1090519039,"editorDrawShape":true,"emitCount":1,"emitDelayMax":0.0,"emitDelayMin":0.0,"emitDelayUnits":0,"emitIntervalMax":1.0,"emitIntervalMin":0.7,"emitIntervalUnits":0,"enabled":true,"endColour":16776960,"GMPresetName":null,"gravityDirection":270.0,"gravityForce":0.0,"headPosition":0.0,"lifetimeMax":100.0,"lifetimeMin":80.0,"linkedEmitter":null,"locked":false,"midColour":1157582848,"mode":0,"name":"Emitter","orientationIncrease":0.0,"orientationMax":359.0,"orientationMin":0.0,"orientationRelative":false,"orientationWiggle":0.0,"regionH":9.679016,"regionW":31.407398,"regionX":0.0,"regionY":17.0,"resourceType":"GMPSEmitter","resourceVersion":"2.0","scaleX":1.0,"scaleY":1.0,"shape":0,"sizeIncrease":0.0,"sizeMax":0.05,"sizeMin":0.03,"sizeWiggle":0.0,"spawnOnDeathCount":1,"spawnOnDeathGMPreset":null,"spawnOnDeathId":null,"spawnOnUpdateCount":1,"spawnOnUpdateGMPreset":null,"spawnOnUpdateId":null,"speedIncrease":0.005,"speedMax":0.1,"speedMin":0.05,"speedWiggle":0.0,"spriteAnimate":false,"spriteId":null,"spriteRandom":false,"spriteStretch":true,"startColour":4294967040,"texture":2,},
+  ],
+  "name":"ps_part_player",
+  "parent":{
+    "name":"Particle Systems",
+    "path":"folders/Particle Systems.yy",
+  },
+  "resourceType":"GMParticleSystem",
+  "resourceVersion":"2.0",
+  "showBackdrop":true,
+  "showBackdropImage":true,
+  "xorigin":0,
+  "yorigin":0,
+}

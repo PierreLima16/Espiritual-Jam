@@ -1,15 +1,6 @@
 
 desenha_gui = function(_qtd, _spr, _y, _scale, _marg)
 {
-    /*
-    var _marg = 0;
-    repeat(_qtd)
-    {
-        draw_sprite_ext(_spr, 0, 40 + _marg, _y, _scale, _scale, 0, c_white, 1);
-        _marg += 50;
-    }
-    */
-    
     draw_set_font(fnt_tutorial);
     
     draw_set_valign(0);
