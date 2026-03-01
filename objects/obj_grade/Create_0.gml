@@ -5,6 +5,9 @@ raio = 70;
 estado_abrindo = function()
 {
     instance_create_layer(x, y, layer, obj_part_barreira);
+    
+    fx(snd_explosao, 0.8, 1.2);
+    
     instance_destroy();
 }
 

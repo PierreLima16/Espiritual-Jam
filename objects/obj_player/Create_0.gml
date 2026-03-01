@@ -120,6 +120,9 @@ aplica_velocidade = function()
             qtd_pulos--;
             
             pulo_timer = 0;
+            
+            fx(snd_jump, 0.8, 1.2);
+            
         }
     }
     
@@ -279,6 +282,7 @@ estado_movendo = function()
     {
         estado = estado_pulo;
         efeito_squash(0.5, 1.7);
+        audio_stop_sound(snd_passos);
     }
 }
 
@@ -290,6 +294,7 @@ estado_espectro = function()
     var _player_espectro = instance_create_depth(x, y, depth - 1, obj_player_espectral);
     _player_espectro.dir = dir;
     
+    fx(snd_troca_mundo1, 0.8, 1.2);
     
     global.mundo = "Espiritual";
     
