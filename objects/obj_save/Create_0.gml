@@ -15,7 +15,10 @@ controla_menu = function()
         
         pos = 0;
         
-        scale = 1
+        scale = 1;
+        
+        //Som de select
+        fx(snd_select, 0.8, 1.2);
     } 
     if (keyboard_check_pressed(vk_down))
     {
@@ -24,6 +27,9 @@ controla_menu = function()
         pos = 0;
         
         scale = 1;
+        
+        //Som de select
+        fx(snd_select, 0.8, 1.2);
     } 
     
     
@@ -33,7 +39,8 @@ controla_menu = function()
         {
             //JOGAR
             case 0:
-                
+                //Som de selecionado
+                fx(snd_selecionado, 0.8, 1.2);
                 cria_transicao_inicia(rm_tutorial_1);
                 
             break;
