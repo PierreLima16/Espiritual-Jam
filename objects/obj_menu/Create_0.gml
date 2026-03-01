@@ -58,8 +58,8 @@ desenha_menu = function()
     draw_set_font(fnt_tutorial);
     
     //Alinhando meu texto
-    draw_set_valign(0);
-    draw_set_halign(0);
+    draw_set_valign(1);
+    draw_set_halign(1);
     
     //Iniciando a margem
     var _marg_y = 0;
@@ -68,8 +68,10 @@ desenha_menu = function()
     for (var i = 0; i < array_length(menu); i++)
     {
         var _cor = c_white;
+        var _sombra = c_black
         var _pos = 1;
         var _scale = 1;
+        var _fx = noone;
         
         var _alt = string_height("I");
         
@@ -77,25 +79,28 @@ desenha_menu = function()
         {
             _cor = c_aqua;
             
+            _sombra = c_blue;
+            
             _pos = pos;
             
             _scale = scale;
             
+            _fx = sin(10  * get_timer()/1000000);
+            
         }
         
         
-        draw_set_colour(_cor)
-        //Desenhando as opções
-        draw_text_transformed(30 + _pos, _gui_h + (i * 1.3) * _alt - 100, menu[i], _scale, _scale, 0);
-        
+        //Sombra
+        draw_set_colour(_sombra);
+        draw_text_transformed(_gui_w/2 /*+ _pos*/, _gui_h + 130 + 3 + (i * 1.3)* _alt - 100, menu[i], _scale, _scale, _fx);
         draw_set_colour(-1);
         
-        //Passando por todo meu array
-        for (var j = 0; j < array_length(menu); j++)
-        {
-            //Incrementando a margem entres as opções
-            _marg_y += 30;
-        }
+        //Texto
+        draw_set_colour(_cor);
+        draw_text_transformed(_gui_w/2 /* + _pos*/, _gui_h + 130 + (i * 1.3) * _alt - 100, menu[i], _scale, _scale, _fx);
+        
+        
+        
         
     }
     //Resetando a fonte
@@ -104,4 +109,10 @@ desenha_menu = function()
     //Resetando o alinhamento
     draw_set_valign(-1);
     draw_set_halign(-1);
+    
+          
+    var _fx = sin(5 * get_timer()/1000000);
+    
+    draw_sprite_ext(spr_titulo, 0, _gui_w/2, _gui_h - 200, 3, 3, _fx, c_white, 1);
+            
 }
