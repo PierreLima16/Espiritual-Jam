@@ -20,6 +20,8 @@ estado_abrindo = function()
     {
         x = xstart + random_range(-1, 1);
     }
+    
+    screenshake(4);
 }
 
 estado_aberta = function()

@@ -2,6 +2,8 @@ estado = noone;
 
 raio = 70;
 
+image_speed = 0;
+
 estado_abrindo = function()
 {
     instance_create_layer(x, y, layer, obj_part_barreira);

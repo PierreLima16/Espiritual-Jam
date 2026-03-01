@@ -1,4 +1,5 @@
 
+
 desenha_gui = function(_qtd, _spr, _y, _scale, _marg)
 {
     draw_set_font(fnt_tutorial);
