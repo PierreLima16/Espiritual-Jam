@@ -1,4 +1,4 @@
-menu = ["JOGAR", "CRÉDITOS"];
+menu = ["JOGAR", "CRÉDITOS", "SAIR"];
 indice = 0;
 
 pos = 40;
@@ -53,10 +53,17 @@ controla_menu = function()
             case 1:
                 //Som de selecionado
                 fx(snd_selecionado, 0.8, 1.2);
-                //carrega_jogo();
-                //cria_transicao_inicia(global.fase_atual);
+                
+                //Indo para a room que contém os créditos
+                cria_transicao_inicia(rm_credits);
                 
             break;
+        
+            case 2:
+                
+                game_end();
+                
+            break;    
         }
     }    
     
@@ -105,7 +112,6 @@ desenha_menu = function()
             _fx = sin(10  * get_timer()/1000000);
             
         }
-        
         
         //Sombra
         draw_set_colour(_sombra);

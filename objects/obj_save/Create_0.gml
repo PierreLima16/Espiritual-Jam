@@ -55,6 +55,9 @@ controla_menu = function()
     
     if (keyboard_check_pressed(vk_escape))
     {
+        //Som de select
+        fx(snd_select, 0.8, 1.2);
+        
         if (!instance_exists(obj_menu))
         {
             instance_create_layer(0, 0, layer, obj_menu);
@@ -108,6 +111,12 @@ desenha_menu = function()
             
         }
         
+        draw_set_colour(c_black);
+        var _effect = sin(10 * get_timer()/1000000);
+        draw_text_transformed(80, 60 + 3, "ESC", 1, 1, _effect);
+        
+        draw_set_colour(c_white);
+        draw_text_transformed(80, 60, "ESC", 1, 1, _effect);
         
         //Sombra
         draw_set_colour(_sombra);

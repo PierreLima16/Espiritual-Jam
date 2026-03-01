@@ -44,7 +44,7 @@ desenha_input = function()
             
             if (abrir)
             {
-                if (keyboard_check_pressed(ord("E")))
+                if (keyboard_check_pressed(ord("K")))
                 {
                     estado = estado_abrindo;
                 }
